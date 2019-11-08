@@ -1,5 +1,10 @@
 service: notes-app-api
 
+# Create our resources with separate CloudFormation templates
+resources:
+  # API Gateway Errors
+  - ${file(resources/api-gateway-errors.yml)}
+
 # Create an optimized package for our functions
 package:
   individually: true
